@@ -7,7 +7,6 @@
   <img src='https://img.shields.io/badge/Node-version16.14.2-green?logo=Node.js'/>
   <img src='https://img.shields.io/badge/Express-v4.17.3-black?logo=Express'/>
   <img src='https://img.shields.io/badge/MongoDB-version4.2.19-green?logo=mongodb'/>
-  <img src='https://img.shields.io/badge/prettier-v2.5.1-pink?logo=prettier'/>
 </p>
 
 ## 🎉 댕댕한바퀴 서비스 소개
@@ -40,3 +39,21 @@ https://user-images.githubusercontent.com/97418591/162681339-d0d530af-7a3c-48d1-
 ### 디자이너
 - 심호선 : 디자!
 - 엄세희 : 이너!
+
+## ✅ 커밋 메시지 규칙
+<p>feat : 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정</p>
+<p>fix : 기능에 대한 버그 수정</p>
+<p>build : 빌드 관련 수정</p>
+<p>chore : 패키지 매니저 수정, 그 외 기타 수정 ex) .gitignore</p>
+<p>ci : CI 관련 설정 수정</p>
+<p>docs : 문서(주석) 수정</p>
+<p>style : 코드 스타일, 포맷팅에 대한 수정</p>
+<p>refactor : 기능의 변화가 아닌 코드 리팩터링 ex) 변수 이름 변경</p>
+<p>test : 테스트 코드 추가/수정</p>
+<p>release : 버전 릴리즈</p>
+<p>design : CSS 등 사용자 UI 디자인 변경</p>
+<p>comment : 필요한 주석 추가 및 변경</p>
+<p>rename : 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우</p>
+<p>remove : 파일을 삭제하는 작업만 수행한 경우</p>
+<p>!BREAKING CHANGE : 커다란 API 변경의 경우</p>
+<p>!HOTFIX : 급하게 치명적인 버그를 고쳐야 하는 경우</p>
