@@ -1,22 +1,18 @@
-const fs = require('fs');
-const https = require('https');
-const express = require('express');
-const connect = require('./schemas/index');
-const cors = require('cors');
+import express from 'express';
+import connect from './schemas/index';
+import cors from 'cors';
 const app = express();
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
-const passport = require('passport');
-const passportConfig = require('./passport');
+import passport from 'passport';
+import passportConfig from './passport';
 const port = process.env.PORT;
-const rateLimit = require('express-rate-limit');
-const helmet = require('helmet');
-const ms = require('ms');
-const userRouter = require('./routes/user');
-const guideRouter = require('./routes/guide');
-const profileRouter = require('./routes/profile');
-const mapRouter = require('./routes/map');
-const emailRouter = require('./routes/email');
+import rateLimit from 'express-rate-limit';
+import helmet from 'helmet';
+import ms from 'ms';
+import userRouter from './routes/user';
+import guideRouter from './routes/guide';
+import profileRouter from './routes/profile';
+import mapRouter from './routes/map';
+import emailRouter from './routes/email';
 require('dotenv').config();
 
 const options = {
@@ -47,7 +43,7 @@ app.use(
   cors({
     origin: 'https://denground.com',
     credentials: true,
-  })
+  }),
 );
 
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -60,7 +56,7 @@ app.use(
       httpOnly: true,
       secure: true,
     },
-  })
+  }),
 );
 
 app.use(passport.initialize());
@@ -70,14 +66,14 @@ app.use(
   helmet.hsts({
     maxAge: ms('1 year'),
     includeSubDomains: true,
-  })
+  }),
 );
 
 app.use(
   rateLimit({
     windowMs: 1 * 60 * 1000,
     max: 100,
-  })
+  }),
 );
 
 app.use(helmet.xssFilter());
